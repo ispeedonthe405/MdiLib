@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace sbMDI.wpf
+namespace mdilib
 {
     public delegate void WindowStateEventHandler(object sender, WindowStateEventArgs e);
 

@@ -6,7 +6,7 @@ using System.Windows.Input;
 using System.Windows.Markup;
 using System.Windows.Media;
 
-namespace sbMDI.wpf
+namespace mdilib
 {
     [ContentProperty("Content")]
     public partial class MdiChild : UserControl

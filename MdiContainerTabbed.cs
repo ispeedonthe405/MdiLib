@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 
 
-namespace sbMDI.wpf
+namespace mdilib
 {
     /// <summary>
     /// Why not just bind TabControl.ItemsSource to Container.Children?

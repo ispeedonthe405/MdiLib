@@ -1,10 +1,11 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace sbMDI.wpf
+namespace mdilib
 {
 
     /// <summary>
@@ -311,7 +312,7 @@ namespace sbMDI.wpf
             Application.Current.Resources.MergedDictionaries.Add(
                 new ResourceDictionary
                 {
-                    Source = new Uri(@"/sbMDI.wpf;component/ThemeDefault.xaml", UriKind.Relative)
+                    Source = new Uri(@"/mdilib;component/ThemeDefault.xaml", UriKind.Relative)
                 });
         }
 
@@ -384,6 +385,14 @@ namespace sbMDI.wpf
             return window;
         }
 
+        public void CloseActiveChildWindow()
+        {
+            if (ActiveMdiChild is not null)
+            {
+                Children.Remove(ActiveMdiChild);
+            }
+        }
+
         public void CloseChildWindow(MdiChild window)
         {
             Children.Remove(window);
@@ -391,9 +400,10 @@ namespace sbMDI.wpf
 
         public void CloseAllChildWindows()
         {
-            foreach(var window in Children)
+            var children = Children.ToArray();
+            foreach (var window in children)
             {
-                Children.Remove(window);
+                window.Close();
             }
         }
 

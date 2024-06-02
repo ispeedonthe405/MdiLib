@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace sbMDI.wpf
+namespace mdilib
 {
     public class ClosingEventArgs : RoutedEventArgs
     {

@@ -1,4 +1,4 @@
-﻿namespace sbMDI.wpf
+﻿namespace mdilib
 {
     public enum eMdiLayout
     {

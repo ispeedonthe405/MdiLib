@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace sbMDI.wpf
+namespace mdilib
 {
     /// <summary>
     /// A very basic MDI container; essentially just a client area for child
@@ -14,7 +14,7 @@ namespace sbMDI.wpf
             //Application.Current.Resources.MergedDictionaries.Add(
             //    new ResourceDictionary
             //    {
-            //        Source = new Uri(@"/sbMDI.wpf;component/ThemeDefault.xaml", UriKind.Relative)
+            //        Source = new Uri(@"/mdilib;component/ThemeDefault.xaml", UriKind.Relative)
             //    });
         }
 
